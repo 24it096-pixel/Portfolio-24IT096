@@ -1,0 +1,202 @@
+/* App Shell */
+.portfolio-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0d1322;
+}
+
+/* Header & Navbar */
+.header-container {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2dd4bf;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.25rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 1.5rem 7rem;
+}
+
+.hero-title {
+  font-size: 3.75rem;
+  font-weight: 800;
+  color: #5aa7f8;
+  letter-spacing: -1px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #8fa0b5;
+  max-width: 650px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Content Container */
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+  width: 100%;
+}
+
+/* Section Headings */
+.section-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #828bf7;
+  text-align: center;
+  letter-spacing: -0.5px;
+  margin-bottom: 2.25rem;
+}
+
+/* About Section */
+.about-section {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-card {
+  background: #111828;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 3rem 3.5rem;
+  max-width: 860px;
+  width: 100%;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.about-card p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-align: center;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 4rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-grid {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1000px;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card {
+  background: #131b2e;
+  border: 1px solid #1e2b45;
+  border-radius: 14px;
+  width: 145px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.15);
+}
+
+.skill-card span {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  white-space: pre-line;
+  line-height: 1.35;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.95rem;
+  border-top: 1px solid #162035;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .skill-card {
+    width: 125px;
+    height: 95px;
+  }
+}
