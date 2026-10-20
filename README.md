@@ -1,16 +1,24 @@
-# React + Vite
+# Student Portfolio - 24IT096
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive student portfolio web application built with **React**, **Vite**, and **React Router v6**.
 
-Currently, two official plugins are available:
+## Features & Practicals
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Practical 1: Introduction to React & Component Architecture
+- Component-based structure with reusable components:
+  - `Header`: Site title & student name (`Student 24IT096`).
+  - `About`: Bio statement.
+  - `Skills`: Dynamic skill badges rendered via props.
+  - `Footer`: Contact & copyright details.
+- Clean JSX syntax with expressions and scoped CSS.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Practical 2: State Management & Routing in React
+- Client-side routing with `react-router-dom`:
+  - `/`: **Home** (Hero, About, and Skills)
+  - `/projects`: **Projects** (Showcasing student projects with category filter)
+  - `/contact`: **Contact** (Controlled form capturing input with live real-time preview and character counter)
+  - `*`: **404 Not Found** (Custom error handling route)
+- Navigation bar (`NavBar`) using `<Link>` elements to prevent full page reloads.
+- Reactive state management with `useState`:
+  - Form input state (`message`) with real-time reactive rendering and character counting.
+  - UI visibility toggle (`showTooltip`) for help instructions.

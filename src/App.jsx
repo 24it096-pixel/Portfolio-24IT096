@@ -1,28 +1,29 @@
-import Header from './components/Header';
-import About from './components/About';
-import Skills from './components/Skills';
+import { Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Home from './components/Home';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import NotFound from './components/NotFound';
 import Footer from './components/Footer';
 import './App.css';
 
 function App() {
-  const studentId = 'Student 24IT096';
-  const skills = [
-    'HTML5',
-    'CSS3',
-    'JavaScript\n(ES6+)',
-    'React',
-    'Vite',
-    'Git',
-    'Responsive\nDesign'
-  ];
-
   return (
     <div className="portfolio-app">
-      <Header name={studentId} />
-      <main className="content-container">
-        <About />
-        <Skills skillList={skills} />
+      {/* Navigation bar with React Router Links */}
+      <NavBar />
+
+      {/* Dynamic route views */}
+      <main className="main-viewport">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
+
+      {/* Footer component */}
       <Footer />
     </div>
   );
