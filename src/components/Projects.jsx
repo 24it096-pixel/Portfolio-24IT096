@@ -7,25 +7,22 @@ function Projects() {
     {
       id: 1,
       title: 'Student Portfolio Website',
-      description: 'A responsive single-page portfolio built with React and Vite featuring dynamic component architecture and clean CSS.',
-      tech: ['React', 'Vite', 'CSS3'],
-      category: 'Frontend'
+      description: 'A responsive single-page portfolio built with React and Vite featuring dynamic component architecture, client-side routing, and clean CSS.',
+      tech: ['React', 'Vite', 'React Router', 'CSS3'],
+      category: 'Frontend',
+      github: 'https://github.com/24it096-pixel/Portfolio-24IT096'
     },
     {
       id: 2,
-      title: 'Interactive Weather Dashboard',
-      description: 'Real-time weather forecast web app using asynchronous API data fetching and dynamic state updates.',
-      tech: ['React', 'JavaScript', 'REST API'],
-      category: 'API'
-    },
-    {
-      id: 3,
-      title: 'Task Tracker & Organizer',
-      description: 'Productivity application with comprehensive task management, local storage persistence, and filter states.',
-      tech: ['React', 'Hooks', 'LocalStorage'],
-      category: 'Frontend'
+      title: 'Task Manager (Full Stack)',
+      description: 'A full-stack task management application with React UI, Express REST API, MongoDB Atlas database, JWT authentication, and optimistic UI updates.',
+      tech: ['React', 'Node.js', 'Express', 'MongoDB Atlas', 'JWT'],
+      category: 'Full Stack',
+      github: 'https://github.com/24it096-pixel/task-manager-api-24IT096'
     }
   ];
+
+  const categories = ['All', 'Frontend', 'Full Stack'];
 
   const filteredProjects =
     selectedCategory === 'All'
@@ -36,12 +33,12 @@ function Projects() {
     <div className="content-container projects-page">
       <h2 className="section-title">My Projects</h2>
       <p className="page-intro">
-        Explore some of the web development applications and academic projects I have built.
+        Explore the web development applications and full-stack projects I have built.
       </p>
 
       {/* Filter Buttons */}
       <div className="project-filters">
-        {['All', 'Frontend', 'API'].map((cat) => (
+        {categories.map((cat) => (
           <button
             key={cat}
             className={`filter-btn ${selectedCategory === cat ? 'active' : ''}`}
