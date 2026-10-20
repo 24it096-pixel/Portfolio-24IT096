@@ -10,7 +10,8 @@ function Projects() {
       description: 'A responsive single-page portfolio built with React and Vite featuring dynamic component architecture, client-side routing, and clean CSS.',
       tech: ['React', 'Vite', 'React Router', 'CSS3'],
       category: 'Frontend',
-      github: 'https://github.com/24it096-pixel/Portfolio-24IT096'
+      github: 'https://github.com/24it096-pixel/Portfolio-24IT096',
+      liveUrl: '/'
     },
     {
       id: 2,
@@ -18,7 +19,8 @@ function Projects() {
       description: 'A full-stack task management application with React UI, Express REST API, MongoDB Atlas database, JWT authentication, and optimistic UI updates.',
       tech: ['React', 'Node.js', 'Express', 'MongoDB Atlas', 'JWT'],
       category: 'Full Stack',
-      github: 'https://github.com/24it096-pixel/task-manager-api-24IT096'
+      github: 'https://github.com/24it096-pixel/task-manager-api-24IT096',
+      liveUrl: 'http://localhost:5174'
     }
   ];
 
@@ -61,6 +63,28 @@ function Projects() {
                   {t}
                 </span>
               ))}
+            </div>
+
+            {/* Interactive Action Links */}
+            <div className="project-actions">
+              {project.liveUrl && project.id === 2 ? (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-btn primary-btn"
+                >
+                  🚀 Launch Live App
+                </a>
+              ) : null}
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-btn secondary-btn"
+              >
+                GitHub Repo ↗
+              </a>
             </div>
           </div>
         ))}
